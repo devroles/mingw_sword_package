@@ -44,6 +44,7 @@
   args:
     chdir: "{{ target }}/{{ item }}"
   with_items: "{{ builds }}"
+  changed_when: false
 
 - name: fetch results
   fetch:
@@ -51,3 +52,4 @@
     dest: "{{ download_dest }}"
     flat: true
   with_items: "{{ builds }}"
+  changed_when: false
