@@ -29,6 +29,6 @@ deploy:
   api_key:
     secure: nPjRqZBSgN0WzoF6go5sKE5lINSCs/bXzXGUlpdplgxYtgh31ZoLpB1kIb5/ugEeILtWIFeW4d18/PCmA5OpIJMeCFe0MzBVaFplWv7DuS3raWyZEIpNz+lkl0Kl5YWemmfylOhHOjggW6WlZ6zom1s5yAyCYvxE78oILm6tASsJ59FmdQY6AxawuiqyOxbzHgvFLPAOnp0h+rgGt+D1I9ZGq2HITIM/Kxzps7NOlWtSi5GshenYPW7Q5eJwUFAgdwfL8/RexwcI1QeivZJTh2/lNKXMmgYWnTr8joLHlczCMmzCXlzqV/DJ8bifxi+Mfd+SHbSqEanwAHvp6VwGtcaqHv0t0QICUOxRJC8aD80vPkx2M9dhXPhNDIGScDOvf0PP098bzJnkkpfrZ17O9wQMpCNs6MfE7vFgAKGK+3oBLJAnybvOHX8WNQAZ4iakRZl7c40wu0+3UPJdQSN8UKThe7vYESnCB4gBOVKHghXAJn128KCXaor53hfeqJhlKDQ6jEfTMcZOuTcyKpbVt/0Ih4rsBEljnMHz8vLxsozAdQ+4qCJ2W454J9Jo1+mdSfJGKDu6iIW2O8K6kYOErxeAVwMijciOEg3epiEGf+tMqKJaor2QWp+amnSWtW5GFHOHuIxCafK39BSoLymPHLhMCrSqanQIPw1U5ksA+3U=
   file: "*.zip"
-  on:
+  "on":
     repo: devroles/mingw_sword_package
     tags: true

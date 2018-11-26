@@ -3,6 +3,8 @@ extends: default
 rules:
   line-length:
     level: error
+    ignore: |
+      .travis.yml
   document-start:
     present: false
     level: error
