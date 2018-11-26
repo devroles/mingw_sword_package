@@ -1,0 +1,34 @@
+- name: install package
+  become: true
+  dnf:
+    name: "{{ packages }}"
+    state: present
+    enablerepo: "fedora-debuginfo,updates-debuginfo,\
+                 updates-testing,updates-testing-debuginfo"
+
+- name: fetch version
+  command: rpm -qv --qf '%{VERSION}' mingw32-sword
+  args:
+    warn: false
+  register: rpm_version
+  changed_when: false
+  tags:
+    - skip_ansible_lint
+
+- name: register version
+  set_fact:
+    sword_version: "{{ rpm_version.stdout.strip() }}"
+
+- name: do the thing
+  include_tasks:
+    file: arch.yml
+  vars:
+    copy_files: "{{ outer_item.copy_files }}"
+    arch: "{{ outer_item.name }}"
+  with_items:
+    - name: i686
+      copy_files: "{{ copy_files_all + copy_files_i686 }}"
+    - name: x86_64
+      copy_files: "{{ copy_files_all + copy_files_x86_64 }}"
+  loop_control:
+    loop_var: outer_item
