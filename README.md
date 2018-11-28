@@ -20,7 +20,7 @@ Currently the following variables are supported:
 
 ### General
 
-* `dwonload_dest` - Directory into which to download the resulting files (must
+* `download_dest` - Directory into which to download the resulting files (must
   end with a '/' character). Defaults to CWD
 
 Dependencies
