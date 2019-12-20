@@ -3,5 +3,4 @@
   roles:
     - role: mingw_sword_package
   vars:
-    ansible_python_interpreter: /usr/bin/python3
     download_dest: "{{ lookup('env', 'MOLECULE_SCENARIO_DIRECTORY') }}/../../"
