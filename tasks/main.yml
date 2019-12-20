@@ -20,15 +20,11 @@
     sword_version: "{{ rpm_version.stdout.strip() }}"
 
 - name: do the thing
-  include_tasks:
-    file: arch.yml
+  include_tasks: arch.yml
   vars:
-    copy_files: "{{ outer_item.copy_files }}"
-    arch: "{{ outer_item.name }}"
+    arch: "{{ outer_item }}"
   with_items:
-    - name: i686
-      copy_files: "{{ copy_files_all + copy_files_i686 }}"
-    - name: x86_64
-      copy_files: "{{ copy_files_all + copy_files_x86_64 }}"
+    - i686
+    - x86_64
   loop_control:
     loop_var: outer_item

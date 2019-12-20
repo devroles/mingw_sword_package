@@ -1,0 +1,5 @@
+_arch_files:
+  - libssl-1_1-x64.dll
+  - libcrypto-1_1-x64.dll
+_arch_copy_files:
+  - libgcc_s_seh-1.dll

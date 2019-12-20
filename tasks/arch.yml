@@ -1,3 +1,6 @@
+- name: read vars
+  include_vars: vars/{{ arch }}.yml
+
 - name: create base path
   set_fact:
     source: "/usr/{{ arch }}-w64-mingw32/sys-root/mingw"

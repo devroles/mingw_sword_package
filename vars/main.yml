@@ -1,10 +1,10 @@
-icu_version: 57
+icu_version: 64
 builds:
   - debug
   - release
 packages:
   - binutils
-  - libselinux-python
+  - python3-libselinux
   - zip
   - mingw32-gdb
   - mingw64-gdb
@@ -37,7 +37,7 @@ packages:
   - mingw64-win-iconv-debuginfo
   - mingw32-zlib-debuginfo
   - mingw64-zlib-debuginfo
-files:
+_base_files:
   - addld.exe
   - diatheke.exe
   - emptyvss.exe
@@ -62,23 +62,20 @@ files:
   - icuuc{{ icu_version }}.dll
   - libclucene-core.dll
   - libclucene-shared.dll
-  - libcrypto-10.dll
   - libcurl-4.dll
   - libglib-2.0-0.dll
   - libgnurx-0.dll
   - libintl-8.dll
   - libssh2-1.dll
-  - libssl-10.dll
   - libsword.dll
   - zlib1.dll
-copy_files_all:
+_base_copy_files:
   - libstdc++-6.dll
   - libwinpthread-1.dll
   - libpcre-1.dll
-copy_files_i686:
-  - libgcc_s_sjlj-1.dll
-copy_files_x86_64:
-  - libgcc_s_seh-1.dll
 debug_files:
   - libexpat-1.dll
   - gdb.exe
+
+files: "{{ _base_files + _arch_files }}"
+copy_files: "{{ _base_copy_files + _arch_copy_files }}"
