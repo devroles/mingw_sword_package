@@ -25,4 +25,5 @@ jobs:
         with:
           artifacts: ./*.zip
           allowUpdates: true
+          name: Release ${{ github.ref }}
           token: ${{ secrets.GITHUB_TOKEN }}
