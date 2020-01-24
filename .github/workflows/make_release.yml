@@ -21,21 +21,8 @@ jobs:
           pip install tox tox-ansible
           tox
       - name: Create release
-        uses: actions/create-release@v1.0.0
-        id: create_release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: ncipollo/release-action@v1
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
-      - name: Upload release
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./*.zip
-          asset_name: Windows builds
-          asset_content_type: application/zip
+          artifacts: ./*.zip
+          allowUpdates: false
+          token: ${{ secrets.GITHUB_TOKEN }}
