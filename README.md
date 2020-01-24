@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/devroles/mingw_sword_package.svg?branch=master)](https://travis-ci.org/devroles/mingw_sword_package)
+[![Build Status](https://github.com/devroles/mingw_sword_package/workflows/Make%20zips/badge.svg)](https://github.com/devroles/mingw_sword_package/workflows)
 
 MinGW SWORD Package
 ===========
