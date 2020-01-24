@@ -16,6 +16,7 @@ provisioner:
   config_options:
     defaults:
       stdout_callback: yaml
+      force_color: true
 verifier:
   name: testinfra
   lint:
