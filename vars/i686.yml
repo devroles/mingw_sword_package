@@ -2,4 +2,4 @@ _arch_files:
   - libssl-1_1.dll
   - libcrypto-1_1.dll
 _arch_copy_files:
-  - libgcc_s_sjlj-1.dll
+  - libgcc_s_dw2-1.dll

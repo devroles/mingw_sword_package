@@ -1,11 +1,7 @@
 dependency:
   name: galaxy
 driver:
-  name: docker
-lint:
-  name: yamllint
-  options:
-    config-file: tests/yamllint.yml
+  name: podman
 platforms:
   - name: instance
     image: fedora:latest
