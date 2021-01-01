@@ -3,9 +3,8 @@
   package:
     name: "{{ packages }}"
     state: present
-    enablerepo: "fedora-debuginfo,updates-debuginfo,\
-                 updates-testing,updates-testing-debuginfo"
-    disablerepo: fedora-modular
+    enablerepo: fedora-debuginfo,updates-debuginfo,updates-testing,updates-testing-debuginfo
+    disablerepo: fedora-modular,updates-modular
 
 - name: fetch version
   command: rpm -qv --qf '%{VERSION}' mingw32-sword
