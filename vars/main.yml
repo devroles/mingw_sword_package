@@ -17,10 +17,6 @@ packages:
   - mingw64-curl-debuginfo
   - mingw32-clucene-debuginfo
   - mingw64-clucene-debuginfo
-  - mingw32-gettext
-  - mingw32-gettext-debuginfo
-  - mingw64-gettext
-  - mingw64-gettext-debuginfo
   - mingw32-gcc-debuginfo
   - mingw64-gcc-debuginfo
   - mingw32-gcc-c++-debuginfo
@@ -29,12 +25,6 @@ packages:
   - mingw64-icu-debuginfo
   - mingw32-libssh2-debuginfo
   - mingw64-libssh2-debuginfo
-  - mingw32-libgnurx
-  - mingw32-libgnurx-debuginfo
-  - mingw64-libgnurx
-  - mingw64-libgnurx-debuginfo
-  - mingw32-pcre
-  - mingw64-pcre
   - mingw32-openssl-debuginfo
   - mingw64-openssl-debuginfo
   - mingw32-win-iconv-debuginfo
@@ -67,14 +57,11 @@ _base_files:
   - libclucene-core.dll
   - libclucene-shared.dll
   - libcurl-4.dll
-  - libgnurx-0.dll
-  - libintl-8.dll
   - libssh2-1.dll
   - libsword.dll
   - zlib1.dll
 _base_copy_files:
   - libidn2-0.dll
-  - libpcre-1.dll
   - libssp-0.dll
   - libstdc++-6.dll
   - libwinpthread-1.dll
